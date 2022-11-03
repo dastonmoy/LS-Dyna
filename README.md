@@ -98,8 +98,6 @@ cd ~
 # Clone the installation file to a newly created directory
 mkdir LS-Dyna; cd ~/LS-Dyna
 wget https://raw.githubusercontent.com/dastonmoy/LS-Dyna/main/install_dyna.sh
-# Enter into the folder
-cd ./LS-Dyna
 # Run the installer, it would do everything for you
 bash install_dyna.sh
 # Remove the github repo
