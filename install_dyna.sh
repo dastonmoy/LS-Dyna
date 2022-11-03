@@ -1,5 +1,5 @@
 # !/bin/sh
-# Creating and running ls-dyna in Ubuntu Linux
+# Installing and running ls-dyna in Ubuntu Linux
 # Written by Tonmoy. Last update: 11/02/22
 
 echo "This script is written to create a LS-dyna environment and to run the solver through Ubuntu"
@@ -33,10 +33,13 @@ echo 'export LSTC_LICENSE_SERVER=license-0.engr.unr.edu' >> ~/.bashrc
 x=1
 while [ $x = 1 ]
 do
-    read -p "Now, you are going to encounter the license aggrement. Please hit \"q\" twice to install... Have you understood the instructions? Type \"yes\"" yn
+    read -p "
+    
+    
+    Now, you are going to encounter the license aggrement. Please hit \"q\" once to install... Have you understood the instructions? Type \"yes\"" yn
     case $yn in
         [Yy]* ) x=0;;
-        * ) echo "Please answer yes or no.";;
+        * ) echo "Please answer yes or no!";;
     esac
 done
 
@@ -51,5 +54,4 @@ echo 'cd ~/Dyna
 # To check, if the installation of the Dyna is perfectly working, download a small example keyword file
 wget https://www.dynaexamples.com/introduction/intro-by-j.-reid/dynaexamples/introduction/intro-by-j.-reid/wood-post/wood-post.k.gz
 gzip -d wood-post.k.gz
-bash LS-Dyna.sh i=wood-post.k
-
+bash LS-Dyna.sh i=~/Desktop/wood-post.k
