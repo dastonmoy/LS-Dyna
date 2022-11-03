@@ -111,19 +111,19 @@ rm -rf ~/LS-Dyna
 A shortcut named LS-Dyna.sh is created on the Desktop of the system the software is installed. Running the software is now as simple as double clicking the shortcut and then specifying the inputs inside the software. The inputs should be following the template shown here (available in Page 376 of [LS-Dyna Keyword Manual: Volume I](https://ftp.lstc.com/anonymous/outgoing/jday/manuals/LS-DYNA_Manual_Volume_I_R13.pdf), and also mentioned in [this training manual](http://fire.fsv.cvut.cz/ifer/2014-Training_school/Materials%20to%20software%20courses/LS-DYNA/Getting_started.pdf)):
 
 ```bash
-> I=inf O=otf G=ptf D3PART=d3part D=dpf F=thf T=tpf A=rrd M=sif S=iff H=iff Z=isf1 L=isf2 B=rlf W=root E=efl X=scl C=cpu K=kill V=vda Y=c3d BEM=bof {KEYWORD} {THERMAL} {COUPLE} {CASE} {PGPKEY} MEMORY=nwds MODULE=dll NCPU=ncpu PARA=para ENDTIME=time NCYCLE=ncycle JOBID=jobid D3PROP=d3prop GMINP=gminp GMOUT=gmout MCHECK=y MAP=map MAP1=map1 LAGMAP=lagmap LAGMAP1=lagmap1
+> I=inf #O=otf G=ptf D3PART=d3part D=dpf F=thf T=tpf A=rrd M=sif S=iff H=iff Z=isf1 L=isf2 B=rlf W=root E=efl X=scl C=cpu K=kill V=vda Y=c3d BEM=bof {KEYWORD} {THERMAL} {COUPLE} {CASE} {PGPKEY} MEMORY=nwds MODULE=dll NCPU=ncpu PARA=para ENDTIME=time NCYCLE=ncycle JOBID=jobid D3PROP=d3prop GMINP=gminp GMOUT=gmout MCHECK=y MAP=map MAP1=map1 LAGMAP=lagmap LAGMAP1=lagmap1
 ```
 
 Detailes of the keywords mentioned here are provided in the manuals. The memory allocation keyword (nwds) are explained a little bit more in [here](https://wiki.hpc.uconn.edu/index.php/LS-Dyna_Guide#:~:text=mpi%20command%20above.-,Memory%20allocation%20for%20ls%2Ddyna,-R10)). When specifying the input file ("I"), you should be redirecting it to the folder where the input files are residing (for example: I=~/Dyna_works/Example/wood-post.k).
 
-## From the terminal
+## From the Terminal
 
 To run the software from the terminal, you can either change the directory to "Desktop" and run from there, or you can also run from the original file located inside "Dyna" folder of the Home directory. I would personally recommend to use a separate directory (e.g., Dyna_inputs) for having all the input (or the \*.k file) and output files, otherwise it would be really difficult to recognize the specific output for a file.
 
 For terminal follow this:
 
 ```bash
-bash ~/Desktop/LS-Dyna I=inf O=otf G=ptf D3PART=d3part D=dpf F=thf T=tpf A=rrd M=sif S=iff H=iff Z=isf1 L=isf2 B=rlf W=root E=efl X=scl C=cpu K=kill V=vda Y=c3d BEM=bof {KEYWORD} {THERMAL} {COUPLE} {CASE} {PGPKEY} MEMORY=nwds MODULE=dll NCPU=ncpu PARA=para ENDTIME=time NCYCLE=ncycle JOBID=jobid D3PROP=d3prop GMINP=gminp GMOUT=gmout MCHECK=y MAP=map MAP1=map1 LAGMAP=lagmap LAGMAP1=lagmap1
+bash ~/Desktop/LS-Dyna I=inf # O=otf G=ptf D3PART=d3part D=dpf F=thf T=tpf A=rrd M=sif S=iff H=iff Z=isf1 L=isf2 B=rlf W=root E=efl X=scl C=cpu K=kill V=vda Y=c3d BEM=bof {KEYWORD} {THERMAL} {COUPLE} {CASE} {PGPKEY} MEMORY=nwds MODULE=dll NCPU=ncpu PARA=para ENDTIME=time NCYCLE=ncycle JOBID=jobid D3PROP=d3prop GMINP=gminp GMOUT=gmout MCHECK=y MAP=map MAP1=map1 LAGMAP=lagmap LAGMAP1=lagmap1
 ```
 
 ## Resources
