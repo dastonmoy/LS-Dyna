@@ -129,6 +129,7 @@ bash ~/Desktop/LS-Dyna I=inf # O=otf G=ptf D3PART=d3part D=dpf F=thf T=tpf A=rrd
 ## Resources
 
 There are a ton of resources for Dyna on the internet. My personal favorites are:
+* LS-PrePost Online documentation(now available in [wayback machine](https://web.archive.org/web/20210508071555/http://www.lstc.com/lspp/content/tutorials.shtml))
 * [LSTC's Getting Started](https://ftp.lstc.com/anonymous/outgoing/jday/manuals/getting-started/GettingStarted.pdf)
 * [LS-Dyna Example Manual](http://ftp.lstc.com/anonymous/outgoing/jday/manuals/Intro_Examples_Manual_DRAFT.pdf)
 * [LS-Dyna Manuals](https://lsdyna.ansys.com/manuals/)
