@@ -72,7 +72,7 @@ Considering all of them, in this tutorial, we are going to install Dyna's R_11_2
 
 ## Installation
 
-### Installation in the Computer
+### Installation in the Office Computer
 
 ```bash
 # Go to home directory of the user
@@ -90,18 +90,20 @@ For any subsequent access to the software, you just have to make the script crea
 
 ### Installation in the Server
 
-For installation in the server just changing the cloning repository to wget would suffice:
+The LS-Dyna version 11.2.1 is already installed in the UNR College of Engrineering Network (COEN) under [Seylabi node](https://github.com/UNR-College-of-Engineering/computing-docs/blob/main/infrastructure/servers/cc/partitions/seylabi.md). The ways to access is already described in the previous doc. 
+
+Under Seylabi server, the software can be easily accessed through:
 
 ```bash
-# Go to home directory of the user
-cd ~
-# Clone the installation file to a newly created directory
-mkdir LS-Dyna; cd ~/LS-Dyna
-wget https://raw.githubusercontent.com/dastonmoy/LS-Dyna/main/install_dyna.sh
-# Run the installer, it would do everything for you
-bash install_dyna.sh
-# Remove the github repo
-rm -rf ~/LS-Dyna
+# Loading OpenMPI version 2.1.3
+module load openmpi/2.1.3
+# Loading LS-Dyna v11.2.1
+module load ls-dyna/11.2.1/sse2-openmpi
+# Setting up the environmental variables/Network license
+export LSTC_LICENSE=network
+export LSTC_LICENSE_SERVER=license-0.engr.unr.edu
+# Start LS-Dyna
+ls-dyna
 ```
 
 ## Running LS-Dyna
