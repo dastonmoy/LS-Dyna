@@ -96,14 +96,33 @@ Under Seylabi server, the software can be easily accessed through:
 
 ```bash
 # Loading OpenMPI version 2.1.3
-module load openmpi/2.1.3
+ml openmpi/2.1.3
 # Loading LS-Dyna v11.2.1
-module load ls-dyna/11.2.1/sse2-openmpi
+ml ls-dyna/11.2.1/sse2-openmpi
 # Setting up the environmental variables/Network license
 export LSTC_LICENSE=network
 export LSTC_LICENSE_SERVER=license-0.engr.unr.edu
 # Start LS-Dyna
 ls-dyna
+```
+
+It is sometimes advantageous to define the license parameters in the unix configuration so that we don't need to load it everytime when the terminal initializes. For that run the following commands in the terminal-
+
+```bash
+# Go to the .bashrc and define the license parameters
+echo "export LSTC_LICENSE=network
+export LSTC_LICENSE_SERVER=license-0.engr.unr.edu" >> ~/.bashrc
+```
+
+Now, only loading the neccessary libraries will be enough -
+
+```bash
+# Unloading any modulus previously loaded
+ml purge
+# Loading OpenMPI 4
+ml openmpi/4.1.5a1
+# Loading LS-Dyna 14.0.0
+ml ls-dyna/14.0.0/mpp-d-sse2-openmpi
 ```
 
 ## Running LS-Dyna
